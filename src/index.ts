@@ -1,3 +1,7 @@
-import { app } from "./app";
+import app from "./app";
+import { config } from "dotenv";
+config();
 
-app.listen(3333, () => console.log("Server is running!"));
+const port = process.env.PORT || 8000;
+
+app.listen(port, () => console.log("Server is running!"));
